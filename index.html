@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>employee Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Employee Management System</h1>
+    </header>
+
+    <nav>
+        <a href="#add-employee">Add Employee</a>
+        <a href="#view-employees">View Employees</a>
+        <a href="#department-summary">Department Summary</a>
+    </nav>
+
+    <section id="add-employee">
+        <h2>New Employee</h2>
+        <form id="employee-form">
+            <input type="text" id="emp-id" placeholder="Employee ID" required>
+            <input type="text" id="name" placeholder="Name" required>
+            <input type="text" id="department" placeholder="Department" required>
+            <input type="number" id="salary" placeholder="Salary" required>
+            <input type="text" id="performance" placeholder="Performance Review">
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <section id="view-employees">
+        <h2>Employees List</h2>
+        <input type="text" id="search" placeholder="Search" oninput="searchEmployees()">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Department</th>
+                    <th>Salary</th> 
+                    <th>Performance</th>
+                    <th>Actions</th>
+                   
+                  
+                   
+                    </tr>
+            </thead>
+            <tbody id="employee-table-body"></tbody>
+        </table>
+    </section>
+
+    <section id="department-summary">
+        <h2> Employment Summary </h2>
+        <div id="summary-report"></div>
+    </section>
+
+    <footer>
+        <p>2024 Employee Management System </p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
